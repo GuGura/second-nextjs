@@ -1,9 +1,9 @@
+import React from 'react'
 import './globals.css'
 import {Inter} from 'next/font/google'
-import React from 'react'
 import Navbar from "@/app/Navbar/Navbar";
 import Footer from "@/app/Footer";
-import {SessionProvider} from "next-auth/react";
+import SessionProvider from "@/app/SessionProvider";
 
 
 const inter = Inter({subsets: ['latin']})

@@ -23,7 +23,7 @@ export default async function CartPage() {
         <p className='mb-3 font-bold'>
           Total: {formatPrice(cart?.subtotal || 0)}
         </p>
-        <button className='btn btn-primary sm:w-[200px]'>Checkout</button>
+        <button className='btn btn-primary sm:w-[200px]'>Check out</button>
       </div>
     </div>
   )
