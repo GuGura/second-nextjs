@@ -1,4 +1,4 @@
-import prisma from "@/lib/db/prisma";
+import {prisma} from "@/lib/db/prisma";
 import {cookies} from "next/headers";
 import {Cart, CartItem, Prisma} from "@prisma/client";
 import {getServerSession} from "next-auth";

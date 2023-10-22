@@ -14,7 +14,7 @@ model Product {
   name        String
   price       Int
   createdAt   DateTime   @default(now())
-  updateAt    DateTime   @updatedAt
+  updatedAt   DateTime   @updatedAt
   CartItem    CartItem[]
 
   @@map("products")
@@ -26,7 +26,7 @@ model Cart {
   userId    String?    @db.ObjectId
   user      User?      @relation(fields: [userId], references: [id], onDelete: Cascade)
   createdAt DateTime   @default(now())
-  updateAt  DateTime   @updatedAt
+  updatedAt DateTime   @updatedAt
 
   @@map("carts")
 }
@@ -39,7 +39,7 @@ model CartItem {
   cartId    String  @db.ObjectId
   cart      Cart    @relation(fields: [cartId], references: [id], onDelete: Cascade)
 
-  @@map("cartItems")
+  @@map("cartitems")
 }
 
 model Account {
@@ -47,7 +47,7 @@ model Account {
   userId            String  @db.ObjectId
   type              String
   provider          String
-  providerAccountId String  @map("provider_account_id")
+  providerAccountId String
   refresh_token     String? @db.String
   access_token      String? @db.String
   expires_at        Int?
